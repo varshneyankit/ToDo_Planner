@@ -15,4 +15,6 @@
     <string name="create_task_body_hint">Body</string>
     <string name="dashboard_fab_description">Create Task</string>
     <string name="login_title_text">Sign in to Start Using this App</string>
+    <string name="item_created_text">Created On</string>
+    <string name="item_completed_text">Completed On</string>
 </resources>

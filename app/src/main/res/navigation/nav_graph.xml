@@ -28,11 +28,16 @@
             android:id="@+id/action_DashboardFragment_to_LoginFragment"
             app:destination="@id/LoginFragment"
             app:popUpTo="@+id/nav_graph"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
 
         <action
             android:id="@+id/action_DashboardFragment_to_TaskFragment"
             app:destination="@id/TaskFragment" />
+
+        <argument
+            android:name="isNewUser"
+            app:argType="boolean" />
+
     </fragment>
 
     <fragment

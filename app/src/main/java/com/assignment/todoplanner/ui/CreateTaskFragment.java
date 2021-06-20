@@ -61,18 +61,17 @@ public class CreateTaskFragment extends Fragment {
             if (taskColor != null)
                 rootLayout.setBackgroundColor(ContextCompat.getColor(view.getContext(), color));
         });
-
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.dashboard_fab_description);
         if (mainViewModel.getCurrentTask() != null) {
+            toolbar.setTitle("Update Task");
             currentTask = mainViewModel.getCurrentTask();
             taskTitle.setText(currentTask.getTitle());
             taskBody.setText(currentTask.getDescription());
             rootLayout.setBackgroundColor(ContextCompat.getColor(view.getContext(), currentTask.getColor()));
         }
-
         onBackPressed();
         setHasOptionsMenu(true);
-        Toolbar toolbar = view.findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.dashboard_fab_description);
         if (getActivity() != null)
             ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         return view;
@@ -124,8 +123,9 @@ public class CreateTaskFragment extends Fragment {
     }
 
     private void navigateToDashboard() {
+        CreateTaskFragmentDirections.ActionTaskFragmentToDashboardFragment action = CreateTaskFragmentDirections.actionTaskFragmentToDashboardFragment(false);
         NavHostFragment.findNavController(CreateTaskFragment.this)
-                .navigate(R.id.action_TaskFragment_to_DashboardFragment);
+                .navigate(action);
     }
 
     private List<Integer> getColorsList() {

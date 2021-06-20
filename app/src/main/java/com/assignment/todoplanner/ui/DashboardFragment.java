@@ -44,7 +44,7 @@ public class DashboardFragment extends Fragment {
     private MainViewModel mainViewModel;
     private TaskListAdpater taskListAdpater;
     private RecyclerView recyclerView;
-
+    private boolean isNewUser;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -52,10 +52,20 @@ public class DashboardFragment extends Fragment {
     ) {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
         preferencesConfig = new SharedPreferencesConfig(requireActivity().getApplicationContext());
+        DashboardFragmentArgs args = DashboardFragmentArgs.fromBundle(getArguments());
+        this.isNewUser = args.getIsNewUser();
         mainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
         recyclerView = view.findViewById(R.id.dashboard_recycler_view);
         taskListAdpater = new TaskListAdpater(taskList, this::onTaskClick, this::onTaskStatusClick);
         TextView emptyText = view.findViewById(R.id.dashboard_body);
+        if (isNewUser) {
+            Task task = new Task("Welcome " + preferencesConfig.readUserName(), "* Start adding new Tasks by using '+' button" +
+                    "\n* Pick suitable color from color palette" +
+                    "\n* Delete a task by swiping left/right" +
+                    "\n* Mark completed task by clicking the icon on top right" +
+                    "\n* Sync your tasks across multiple devices by using same account", R.color.colorRed, false);
+            mainViewModel.insertTask(task);
+        }
         mainViewModel.getAllTasks().observe(requireActivity(), tasks -> {
             taskList.clear();
             if (!tasks.isEmpty()) {
