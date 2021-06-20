@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.assignment.todoplanner.database.AppDatabase;
 import com.assignment.todoplanner.database.SharedPreferencesConfig;
 import com.assignment.todoplanner.pojos.Task;
 import com.google.firebase.Timestamp;
@@ -25,13 +24,12 @@ import java.util.Objects;
 public class MainViewModel extends AndroidViewModel {
     private final MutableLiveData<Integer> taskColor = new MutableLiveData<>();
     private final SharedPreferencesConfig preferencesConfig;
-    private Task currentTask;
     private final MutableLiveData<List<Task>> dataList = new MutableLiveData<>();
+    private Task currentTask;
     private CollectionReference firestore;
 
     public MainViewModel(@NonNull Application application) {
         super(application);
-        AppDatabase db = AppDatabase.getInstance(application);
         preferencesConfig = new SharedPreferencesConfig(getApplication().getApplicationContext());
         updateUser();
     }
