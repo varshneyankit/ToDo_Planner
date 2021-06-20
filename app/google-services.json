@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "99618682553",
+    "project_id": "to-do-planner-e34fc",
+    "storage_bucket": "to-do-planner-e34fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99618682553:android:adf857fa49be9ebbf28d68",
+        "android_client_info": {
+          "package_name": "com.assignment.todoplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99618682553-4gmi3pg34h1u4sibadtviadk7c1p2704.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfLnBytfnirx-dniwR5bJpn3Sug5HUmSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99618682553-4gmi3pg34h1u4sibadtviadk7c1p2704.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

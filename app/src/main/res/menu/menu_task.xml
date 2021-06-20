@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.assignment.todoplanner.MainActivityity">
+    <item
+        android:id="@+id/action_save"
+        android:iconTint="@color/teal_700"
+        android:title="Save"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:iconTint="@color/teal_700"
+        android:title="Share"
+        app:showAsAction="always" />
+</menu>

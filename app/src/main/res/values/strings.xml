@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">To Do Planner</string>
+    <string name="about_me_title">About me</string>
+    <string name="about_me_name">Ankit Varshney</string>
+    <string name="about_me_contact_no">Call me: +91 8375983710</string>
+    <string name="about_me_email">E-mail: ankitv397@gmail.com</string>
+    <string name="about_me_github">GitHub: https://github.com/varshneyankit/</string>
+    <string name="about_me_resume">Resume: Google Drive Link</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Login Fragment</string>
+    <string name="second_fragment_label">Dashboard Fragment</string>
+    <string name="third_fragment_label">Create Task Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="create_task_title_hint">Title</string>
+    <string name="create_task_body_hint">Body</string>
+    <string name="dashboard_fab_description">Create Task</string>
+    <string name="login_title_text">Sign in to Start Using this App</string>
+</resources>
